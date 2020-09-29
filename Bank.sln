@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.API", "Bank.API\Bank.API.csproj", "{88BD12D1-4AC5-4630-A65D-550587633DDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.IdentityServer", "Bank.IdentityServer\Bank.IdentityServer.csproj", "{37D0A576-A8AA-49E9-8F90-76D02FD4D960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{88BD12D1-4AC5-4630-A65D-550587633DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88BD12D1-4AC5-4630-A65D-550587633DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88BD12D1-4AC5-4630-A65D-550587633DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D0A576-A8AA-49E9-8F90-76D02FD4D960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D0A576-A8AA-49E9-8F90-76D02FD4D960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D0A576-A8AA-49E9-8F90-76D02FD4D960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D0A576-A8AA-49E9-8F90-76D02FD4D960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
