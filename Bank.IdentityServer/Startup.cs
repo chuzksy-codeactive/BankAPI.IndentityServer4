@@ -17,9 +17,12 @@ namespace Bank.IdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityServer()
-                .AddDeveloperSigningCredential()
+                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
-                .AddInMemoryClients(Config.Clients);
+                .AddDeveloperSigningCredential(); ;
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

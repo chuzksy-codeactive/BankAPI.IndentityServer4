@@ -20,6 +20,14 @@ namespace Bank.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication("Bearer", options =>
+                {
+                    options.ApiName = "BankAPI";
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                });
+
             services.AddDbContext<BankContext>(options => options.UseSqlServer(Configuration["BankingDB"]));
             services.AddControllers();
         }
@@ -34,6 +42,7 @@ namespace Bank.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
